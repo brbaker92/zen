@@ -27,10 +27,10 @@
 // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT |
 //                    | GUI | SYM | SPC |   | SPC | NUM  | ALT |
                         bindings = < 
-   &kp TAB   &kp Q &kp W &kp E    &kp R      &kp T       &kp Y   &kp U      &kp I     &kp O   &kp P    &kp BKSP
+   &kp TAB   &kp Q &kp W &kp E    &kp R      &kp T       &kp Y   &kp U      &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D    &kp F      &kp G       &kp H   &kp J      &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C    &kp V      &kp B       &kp N   &kp M      &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                         &kp LGUI &mo SYMBOL &kp SPC     &kp SPC &mo NUMPAD &kp RALT
+                         &kp LGUI &mo SYMBOL &kp SPACE     &kp SPACE &mo NUMPAD &kp RALT
                         >;
                 };
 
@@ -45,7 +45,7 @@
    &kp ESC   &trans   &trans &trans   &trans    &trans      &kp CARET   &kp AMPS   &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp DEL
    &kp LCTRL &trans   &trans &trans   &trans    &trans      &kp MINUS   &kp EQUAL  &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
    &kp LSHFT &trans   &trans &trans   &trans    &trans      &kp UNDER   &kp PLUS   &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                             &kp LGUI &trans    &kp SPC     &kp ENTER     &mo CONFIG &kp RALT
+                             &kp LGUI &trans    &kp SPACE     &kp ENTER     &mo CONFIG &kp RALT
                         >;
                 };
 
@@ -57,10 +57,10 @@
 // | SHFT | dot |  1  |  2  |  3  |  0  |   |     |     |     |     |     |      |
 //                    | GUI | FN  | SPC |   | ENT | FN  | ALT |
                         bindings = <
-   &kp ESC   &kp GRAVE &kp N7 &kp N8   &kp N9     &kp EQUAL     &trans   &trans   &trans &trans    &trans   &kp BKSP
-   &kp LCTRL &trans    &kp N4 &kp N5   &kp N6     &kp MINUS     &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp BSLH &kp GRAVE
-   &kp LSHFT &kp DOT   &kp N1 &kp N2   &kp N3     &kp N0        &trans   &trans   &trans &trans    &trans   &trans
-                    	      &kp LGUI &mo CONFIG &kp SPC       &kp ENTER  &trans   &kp RALT
+   &kp ESC   &kp GRAVE &kp N7 &kp N8   &kp N9     &kp EQUAL     &trans    &trans   &trans &trans    &trans   &kp BSPC
+   &kp LCTRL &trans    &kp N4 &kp N5   &kp N6     &kp MINUS     &kp LEFT  &kp DOWN &kp UP &kp RIGHT &kp BSLH &kp GRAVE
+   &kp LSHFT &kp DOT   &kp N1 &kp N2   &kp N3     &kp N0        &trans    &trans   &trans &trans    &trans   &trans
+                    	      &kp LGUI &mo CONFIG &kp SPACE       &kp ENTER &trans   &kp RALT
                         >;
                 };
 
@@ -75,7 +75,7 @@
    &reset &trans &kp F7 &kp F8 &kp F9   &kp F10   &trans        &trans       &trans       &trans       &trans &BT_CLR
    &trans &trans &kp F4 &kp F5 &kp F6   &kp F11   &trans        &bt BT_SEL 3 &bt BT_SEL 4 &trans       &trans &trans 
    &trans &trans &kp F1 &kp F2 &kp F3   &kp F12   &trans        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans &tog GAMING
-                    	       &kp LGUI &trans    &kp SPC       &kp ENTER      &trans       &kp RALT
+                    	       &kp LGUI &trans    &kp SPACE     &kp ENTER    &trans       &kp RALT
                         >;
                 };
 
@@ -87,10 +87,10 @@
 // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT  |
 //                    | GUI | NUM | SPC |   | SPC | SYM  | ALT |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E    &kp R      &kp T     &kp Y   &kp U      &kp I     &kp O   &kp P    &kp BKSP
+   &kp TAB   &kp Q &kp W &kp E    &kp R      &kp T     &kp Y   &kp U      &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D    &kp F      &kp G     &kp H   &kp J      &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C    &kp V      &kp B     &kp N   &kp M      &kp COMMA &kp DOT &kp FSLH &kp ESC
-                         &kp LGUI &mo NUMPAD &kp SPC   &kp SPC &mo SYMBOL &kp RALT
+                         &kp LGUI &mo NUMPAD &kp SPACE   &kp SPACE &mo SYMBOL &kp RALT
                         >;
                 };
         };
