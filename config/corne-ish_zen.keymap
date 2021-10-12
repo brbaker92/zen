@@ -56,8 +56,8 @@
 // | SHFT | dot |  1  |  2  |  3  |  0  |   |     |     |     |     |     |      |
 //                    | GUI | FN  | SPC |   | ENT | FN  | ALT |
                         bindings = <
-   &kp ESC   &kp GRAVE &kp N7 &kp N8   &kp N9     &kp EQUAL     &trans    &trans   &trans &trans    &trans   &kp BSPC
-   &kp LCTRL &trans    &kp N4 &kp N5   &kp N6     &kp MINUS     &kp LEFT  &kp DOWN &kp UP &kp RIGHT &kp BSLH &kp GRAVE
+   &kp ESC   &trans    &kp N7 &kp N8   &kp N9     &kp EQUAL     &trans    &trans   &trans &trans    &trans   &kp BSPC
+   &kp LCTRL &trans    &kp N4 &kp N5   &kp N6     &kp MINUS     &kp LEFT  &kp DOWN &kp UP &kp RIGHT &trans   &trans
    &kp LSHFT &kp DOT   &kp N1 &kp N2   &kp N3     &kp N0        &trans    &trans   &trans &trans    &trans   &trans
                     	      &kp LGUI &mo CONFIG &kp SPACE     &kp ENTER &trans   &kp RALT
                         >;
