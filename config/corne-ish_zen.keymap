@@ -12,7 +12,7 @@
 #define QWERTY 0
 #define SYMBOL 1
 #define NUMPAD 2
-#define FUNCTN 3
+#define FUNCTION 3
 #define GAMING 4
 
 / {
@@ -26,7 +26,7 @@
 // | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT  |
 //                    | GUI | SYM | SPC |   | SPC | NUM  | ALT |
-                        bindings = < 
+                        bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
@@ -34,51 +34,58 @@
                         >;
                 };
 
+
                 symbol_layer {
                         label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
-// | ESC  |     |     |     |     |     |   |  ^  |  &  |  *  |  (  |  )  | DEL  |
+// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
 // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |  FN | SPC |   | ENT |  FN | ALT |
-                        bindings = <
-   &kp ESC   &trans   &trans &trans   &trans   &trans      &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp DEL
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                    	     &kp LGUI &trans   &kp SPACE   &kp RET   &mo FUNCTN    &kp RALT
-                        >;
-                };
-
-                number_layer {
-                        lable = "NUMPAD"
-// -----------------------------------------------------------------------------------------
-// | ESC  |  `  |  7  |  8  |  9  |  =  |   |     |     |     |     |     | DEL  |
-// | CTRL |     |  4  |  5  |  6  |  -  |   | LFT | DWN | UP  | RGHT|     |      |
-// | SHFT | dot |  1  |  2  |  3  |  0  |   |     |     |     |     |     |      |
-//                    | GUI | FN  | SPC |   | ENT | FN  | ALT |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
    &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
    &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                    	     &kp LGUI &mo FUNCTN   &kp SPACE   &kp RET   &trans    &kp RALT
+                    	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
+        };
+};
 
-                 function_layer {
-                        lable = "FUNCTN"
-                        bindings = <
-                // -----------------------------------------------------------------------------------------
-// | RST  |     | F7  | F8  | F9  | F10 |   |     |     |     |     |     |BT-CLR|
-// |      |     | F4  | F5  | F6  | F11 |   |     | BT4 | BT5 |     |     |      |
-// |      |     | F1  | F2  | F3  | F12 |   |     | BT1 | BT2 | BT3 |     | GMG  |
+
+                number_layer {
+                        lable = "NUMPAD"
+// -----------------------------------------------------------------------------------------
+// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &reset    &trans   &kp F7  &kp F8    &kp F9  &kp F10         &trans    &trans         &trans           &trans         &trans    &BT_CLR
-   &trans    &trans   &kp F4  &kp F5    &kp F6  &kp F11         &trans    &bt BT_SEL 3   &bt BT_SEL 4     &trans         &trans    &trans 
-   &trans    &trans   &kp F1  &kp F2    &kp F3  &kp F12         &trans    &bt BT_SEL 0   &bt BT_SEL 1     &bt BT_SEL 2   &trans    &tog GAMING
-                    	      &kp LGUI  &trans  &kp SPACE       &kp RET   &trans         &kp RALT
+   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
+   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
+   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+                    	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
+        };
+};
+
+                 function_layer {
+                        lable = "FUNCTION"
+                // -----------------------------------------------------------------------------------------
+// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        bindings = <
+   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
+   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
+   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+                    	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+                        >;
+                };
+        };
+};
 
                 gaming_layer {
                         label = "GAMING";
@@ -86,7 +93,7 @@
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT  |
-//                    | GUI | NUM | SPC |   | SPC | SYM  | ALT |
+//                    | GUI | NUM | SPC |   | SPC | NUM  | ALT |
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
@@ -94,5 +101,3 @@
                   &kp LGUI &mo NUMPAD &kp SPACE   &kp SPACE &mo SYMBOL &kp RALT
                         >;
                 };
-        };
-};
