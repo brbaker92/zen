@@ -47,7 +47,8 @@
                              &kp LGUI &trans    &kp SPACE     &kp ENTER &mo CONFIG &kp RALT
                         >;
                 };
-number_layer {
+
+                number_layer {
                         lable = "NUMPAD";
 // -----------------------------------------------------------------------------------------
 // | ESC  |  `  |  7  |  8  |  9  |  =  |   |     |     |     |     |     | BKSP |
