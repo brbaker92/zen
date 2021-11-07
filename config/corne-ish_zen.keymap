@@ -36,15 +36,19 @@
                 symbol_layer {
                         label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
-// | ESC  |     |     |     |     |     |   |  ^  |  &  |  *  |  (  |  )  | DEL  |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+// | ESC  |     |     |     |     |     |   |  /  |  *  |  (  |  )  |  ^  | DEL  |
+// | CTRL |     |     |     |     |     |   |  =  |  +  |  [  |  ]  |  \  |  `   |
+// | SHFT |     |     |     |     |     |   |  -  |  _  |  {  |  }  | "|" |  ~   |
 //                    | GUI |  FN | SPC |   | ENT |  FN | ALT |
                         bindings = <
-   &kp ESC   &trans   &trans &trans   &trans    &trans        &kp CARET &kp AMPS   &kp STAR  &kp LPAR &kp RPAR &kp DEL
-   &kp LCTRL &trans   &trans &trans   &trans    &trans        &kp MINUS &kp EQUAL  &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans    &trans        &kp UNDER &kp PLUS   &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
-                             &kp LGUI &trans    &kp SPACE     &kp ENTER &mo CONFIG &kp RALT
+   &kp ESC   &trans   &trans &trans   &trans    &trans        &kp FSLH  &kp STAR   &kp LPAR  &kp LPAR &kp CARET &kp DEL
+   &kp LCTRL &trans   &trans &trans   &trans    &trans        &kp PLUS  &kp EQUAL  &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
+   &kp LSHFT &trans   &trans &trans   &trans    &trans        &kp MINUS &kp UNDER  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
+                             &kp LGUI &trans    &kp SPACE     &kp ENTER &mo CONFIG &kp RALT                        
+                        
+                        
+                        
+                        
                         >;
                 };
                 number_layer {
@@ -87,7 +91,7 @@
    &kp LCTRL &kp A &kp S &kp D    &kp F      &kp G       &kp H     &kp J      &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C    &kp V      &kp B       &kp N     &kp M      &kp COMMA &kp DOT &kp FSLH &kp ESC
                          &kp LGUI &mo NUMPAD &kp SPACE   &kp SPACE &mo CONFIG &kp RALT
-                        >;eee
+                        >;
                 };
         };
 };
