@@ -41,14 +41,10 @@
 // | SHFT |     |     |     |     |     |   |  -  |  _  |  {  |  }  | "|" |  ~   |
 //                    | GUI |  FN | SPC |   | ENT |  FN | ALT |
                         bindings = <
-   &kp ESC   &trans   &trans &trans   &trans    &trans        &kp FSLH  &kp STAR   &kp LPAR  &kp LPAR &kp CARET &kp DEL
+   &kp ESC   &trans   &trans &trans   &trans    &trans        &kp FSLH  &kp STAR   &kp LPAR  &kp RPAR &kp CARET &kp DEL
    &kp LCTRL &trans   &trans &trans   &trans    &trans        &kp PLUS  &kp EQUAL  &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
    &kp LSHFT &trans   &trans &trans   &trans    &trans        &kp MINUS &kp UNDER  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
                              &kp LGUI &trans    &kp SPACE     &kp ENTER &mo CONFIG &kp RALT                        
-                        
-                        
-                        
-                        
                         >;
                 };
                 number_layer {
