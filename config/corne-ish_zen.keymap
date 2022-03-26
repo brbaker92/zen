@@ -10,8 +10,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define QWERTY 0
-#define SYMBOL 1
-#define NUMPAD 2
+#define NUMPAD 1
+#define SYMBOL 2
 #define CONFIG 3
 #define GAMING 4
 
@@ -33,20 +33,6 @@
                          &kp LGUI &mo SYMBOL &kp SPACE     &kp SPACE &mo NUMPAD &kp RALT
                         >;
                 };
-                symbol_layer {
-                        label = "SYMBOL";
-// -----------------------------------------------------------------------------------------
-// | ESC  |     |     |     |     |     |   |  /  |  *  |  (  |  )  |  ^  | DEL  |
-// | CTRL |     |     |     |     |     |   |  =  |  +  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  -  |  _  |  {  |  }  | "|" |  ~   |
-//                    | GUI |  FN | SPC |   | ENT |  FN | ALT |
-                        bindings = <
-   &kp ESC   &trans   &trans &trans   &trans    &trans        &kp FSLH  &kp STAR   &kp LPAR  &kp RPAR &kp CARET &kp DEL
-   &kp LCTRL &trans   &trans &trans   &trans    &trans        &kp PLUS  &kp EQUAL  &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans    &trans        &kp MINUS &kp UNDER  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
-                             &kp LGUI &trans    &kp SPACE     &kp ENTER &mo CONFIG &kp RALT                        
-                        >;
-                };
                 number_layer {
                         label = "NUMPAD";
 // -----------------------------------------------------------------------------------------
@@ -59,6 +45,20 @@
    &kp LCTRL &trans    &kp N4 &kp N5   &kp N6     &kp MINUS     &kp LEFT  &kp DOWN &kp UP &kp RIGHT &trans   &trans
    &kp LSHFT &kp DOT   &kp N1 &kp N2   &kp N3     &kp N0        &trans    &trans   &trans &trans    &trans   &trans
                     	      &kp LGUI &mo CONFIG &kp SPACE     &kp ENTER &trans   &kp RALT
+                        >;
+                };
+                symbol_layer {
+                        label = "SYMBOL";
+// -----------------------------------------------------------------------------------------
+// | ESC  |     |     |     |     |     |   |  /  |  *  |  (  |  )  |  ^  | DEL  |
+// | CTRL |     |     |     |     |     |   |  =  |  +  |  [  |  ]  |  \  |  `   |
+// | SHFT |     |     |     |     |     |   |  -  |  _  |  {  |  }  | "|" |  ~   |
+//                    | GUI |  FN | SPC |   | ENT |  FN | ALT |
+                        bindings = <
+   &kp ESC   &trans   &trans &trans   &trans    &trans        &kp FSLH  &kp STAR   &kp LPAR  &kp RPAR &kp CARET &kp DEL
+   &kp LCTRL &trans   &trans &trans   &trans    &trans        &kp PLUS  &kp EQUAL  &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
+   &kp LSHFT &trans   &trans &trans   &trans    &trans        &kp MINUS &kp UNDER  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
+                             &kp LGUI &trans    &kp SPACE     &kp ENTER &mo CONFIG &kp RALT                        
                         >;
                 };
                  config_layer {
